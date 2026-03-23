@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>The Correct Circle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="circle">円</button>
+                <button class="mode-btn" data-mode="triangle">正三角形</button>
+                <button class="mode-btn" data-mode="angle">角度 (45°)</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="canvas-container">
+                <canvas id="draw-canvas"></canvas>
+                <div id="center-point"></div>
+                <div id="instruction">円を描いてください</div>
+            </div>
+
+            <div id="result-overlay" class="hidden">
+                <h2 id="score-text">0.0%</h2>
+                <p id="feedback-msg"></p>
+                <div class="actions">
+                    <button id="retry-btn">もう一度</button>
+                    <button id="share-btn">結果をコピー</button>
+                </div>
+            </div>
+        </main>
+
+        <div id="toast" class="hidden">コピーしました！</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
